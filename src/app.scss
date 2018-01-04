@@ -1,0 +1,11 @@
+$container-max-widths: (
+    sm: 540px,
+    md: 540px,
+    lg: 540px,
+    xl: 540px
+);
+
+$primary: #478A23;
+
+@import "~bootstrap/scss/bootstrap";
+@import "~font-awesome/scss/font-awesome";

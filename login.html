@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Portail Robots-JU</title>
+    <link rel="stylesheet" href="captiveportal-app.css">
+</head>
+<body>
+<div class="container">
+    <h1 class="text-center my-3">Intranet Robots-JU</h1>
+
+    <form class="card my-3 js-form" method="post" action="$PORTAL_ACTION$">
+        <input type="hidden" name="redirurl" value="$PORTAL_REDIRURL$">
+        <input type="hidden" name="zone" value="$PORTAL_ZONE$">
+
+        <div class="card-body">
+            <h3 class="card-title">
+                Accès membre
+            </h3>
+
+            <div class="form-group row">
+                <label class="col-md-4 col-form-label" for="auth_user">Utilisateur</label>
+                <div class="col-md-8">
+                    <input class="form-control js-auth-user" type="text" name="auth_user" id="auth_user" required>
+                </div>
+            </div>
+
+            <div class="form-group row js-auth-pass-group">
+                <label class="col-md-4 col-form-label" for="auth_pass">Mot de passe</label>
+                <div class="col-md-8">
+                    <input class="form-control js-auth-pass" type="password" name="auth_pass" id="auth_pass" required>
+                </div>
+            </div>
+
+            <div class="form-group text-center">
+                <div class="custom-control custom-checkbox custom-control-inline">
+                    <input class="custom-control-input js-terms" type="checkbox" id="accept_terms1">
+                    <label class="custom-control-label" for="accept_terms1">
+                        Je réspecterai la charte informatique du club
+                        <a href="#" class="text-muted ml-1"><i class="fa fa-book"></i></a>
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <button class="btn btn-block btn-primary js-submit" type="submit" name="accept" value="Continue">
+                    <i class="fa fa-sign-in mr-1"></i>
+                    Continuer
+                </button>
+            </div>
+        </div>
+    </form>
+
+    <form class="card my-3 js-form js-voucher-form" method="post" action="$PORTAL_ACTION$">
+        <input type="hidden" name="redirurl" value="$PORTAL_REDIRURL$">
+        <input type="hidden" name="zone" value="$PORTAL_ZONE$">
+
+        <div class="card-body">
+            <h3 class="card-title">
+                Accès invité
+            </h3>
+
+            <div class="form-group row">
+                <label class="col-md-4 col-form-label" for="auth_voucher">Code d'accès</label>
+                <div class="col-md-8">
+                    <input class="form-control" type="text" name="auth_voucher" id="auth_voucher" required>
+                </div>
+            </div>
+
+            <div class="form-group text-center">
+                <div class="custom-control custom-checkbox custom-control-inline">
+                    <input class="custom-control-input js-terms" type="checkbox" id="accept_terms2">
+                    <label class="custom-control-label" for="accept_terms2">
+                        Je réspecterai la charte informatique du club
+                        <a href="#" class="text-muted ml-1"><i class="fa fa-book"></i></a>
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <button class="btn btn-block btn-primary js-submit" type="submit" name="accept" value="Continue">
+                    <i class="fa fa-sign-in mr-1"></i>
+                    Continuer
+                </button>
+            </div>
+        </div>
+    </form>
+</div>
+<script src="captiveportal-app.js"></script>
+</body>
+</html>
